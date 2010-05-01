@@ -9,7 +9,9 @@
 	<title>Food Cart Finder!!!</title>
     
     <%= stylesheet_link_tag 'screen', 'formtastic', 'formtastic_changes' %>
-	
+
+    <%= Mapstraction.header(:yahoo) %>	
+    <%= @map.to_html if @map %>
 </head>
 
 <body>

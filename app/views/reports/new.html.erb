@@ -4,6 +4,7 @@
     <% semantic_form_for @report do |f| %>
         <% f.inputs do %>
             <%= f.input :name %>
+            <%= @map.div(:width => 300, :height => 200) %>
             <%= f.input :latitude %>
             <%= f.input :longitude %>
             <%= f.input :hours, :input_html => {:size => "40x4"} %>
