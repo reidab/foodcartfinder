@@ -12,6 +12,31 @@
 
     <%= Mapstraction.header(:yahoo) %>	
     <%= @map.to_html if @map %>
+    
+    <script>
+    function findme() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function(pos) {
+                    var pt = new mxn.LatLonPoint(pos.coords.latitude, pos.coords.longitude);
+                    mapstraction.setCenterAndZoom(pt, 16);
+                    var mk = new mxn.Marker(pt);
+                    mapstraction.addMarker(mk);
+                },
+                function() {
+                    // NOT FOUND
+                    // alert('Could not find location');
+                    // Returning Portland city center
+                    var pt = new mxn.LatLonPoint(45.528479,-122.676086);
+                    mapstraction.setCenterAndZoom(pt, 14);
+                    var mk = new mxn.Marker(pt);
+                    mapstraction.addMarker(mk);
+                });
+        } else {
+            alert('Could not find location');
+        }
+  	}
+    </script>
 </head>
 
 <body>

@@ -5,6 +5,7 @@
         <% f.inputs do %>
             <%= f.input :name %>
             <%= @map.div(:width => 300, :height => 200) %>
+            <%= button_to_function "Find me!", "findme();" %>
             <%= f.input :latitude %>
             <%= f.input :longitude %>
             <%= f.input :hours, :input_html => {:size => "40x4"} %>
