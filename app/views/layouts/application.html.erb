@@ -8,13 +8,14 @@
     
 	<title>Food Cart Finder!!!</title>
     
-    <%= stylesheet_link_tag 'screen' %>
+    <%= stylesheet_link_tag 'screen', 'formtastic' %>
 	
 </head>
 
 <body>
     <%= flash[:notice] %>
     <%= flash[:error] %>
+    <%= flash[:success] %>
     <%= yield %>
 </body>
 </html>
