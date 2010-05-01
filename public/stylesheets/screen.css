@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: orange;
+}
+
+a {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+.content {
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  padding: 1em;
+  -webkit-border-radius: 5px;  
+  -moz-border-radius: 5px;
+}
