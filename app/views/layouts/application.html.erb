@@ -19,10 +19,10 @@
             navigator.geolocation.getCurrentPosition(
                 function(pos) {
                     alert(pos.coords.latitude + ", " + pos.coords.longitude);
-                    // var pt = new mxn.LatLonPoint(pos.coords.latitude, pos.coords.longitude);
-                    // map.setCenterAndZoom(pt, 16);
-                    // var mk = new mxn.Marker(pt);
-                    // map.addMarker(mk);
+                    var pt = new LatLonPoint(pos.coords.latitude, pos.coords.longitude);
+                    map.setCenterAndZoom(pt, 16);
+                    var mk = new Marker(pt);
+                    map.addMarker(mk);
                 },
                 function() {
                     // NOT FOUND
