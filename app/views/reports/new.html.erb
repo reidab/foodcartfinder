@@ -9,7 +9,7 @@
             <%= f.input :hours, :input_html => {:size => "40x4"} %>
             <%= f.input :price_range, :collection => Report::PRICE_RANGES, :as => :select %>
             <%= f.input :food_types, :collection => Report::FOOD_TYPES, :as => :check_boxes %>
-            <%= f.inputs :vegan, :vegetarian, :gluten_free, :name => 'Diet Friendliness' %>
+            <%= f.input :diet_friendliness, :collection => Report::DIETS, :as => :check_boxes %>
             <%= f.input :comments, :input_html => {:size => "40x4"} %>
         <% end -%>
         <% f.buttons do %>

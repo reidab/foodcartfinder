@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100501204714) do
+ActiveRecord::Schema.define(:version => 20100501214606) do
 
   create_table "reports", :force => true do |t|
     t.string   "name"
@@ -17,13 +17,11 @@ ActiveRecord::Schema.define(:version => 20100501204714) do
     t.float    "longitude"
     t.text     "hours"
     t.integer  "price_range"
-    t.boolean  "vegan"
-    t.boolean  "vegetarian"
-    t.boolean  "gluten_free"
     t.text     "comments"
     t.text     "food_types"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "diet_friendliness"
   end
 
 end
