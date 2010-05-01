@@ -12,3 +12,10 @@ The following style may be *conditionally* included for improved support on olde
 form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 
 --------------------------------------------------------------------------------------------------*/
+
+form.formtastic fieldset > ol > li label { float: none; }
+form.formtastic fieldset > ol > li fieldset ol { padding: 0; }
+form.formtastic fieldset > ol > li fieldset legend,
+form.formtastic fieldset > ol > li fieldset legend span,
+form.formtastic fieldset > ol > li fieldset legend.label label,
+form.formtastic fieldset > ol > li fieldset { position: static; padding: 0; }
