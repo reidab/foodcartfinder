@@ -18,19 +18,20 @@
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 function(pos) {
-                    var pt = new mxn.LatLonPoint(pos.coords.latitude, pos.coords.longitude);
-                    map.setCenterAndZoom(pt, 16);
-                    var mk = new mxn.Marker(pt);
-                    map.addMarker(mk);
+                    alert(pos.coords.latitude + ", " + pos.coords.longitude);
+                    // var pt = new mxn.LatLonPoint(pos.coords.latitude, pos.coords.longitude);
+                    // map.setCenterAndZoom(pt, 16);
+                    // var mk = new mxn.Marker(pt);
+                    // map.addMarker(mk);
                 },
                 function() {
                     // NOT FOUND
                     // alert('Could not find location');
                     // Returning Portland city center
-                    var pt = new mxn.LatLonPoint(45.528479,-122.676086);
-                    map.setCenterAndZoom(pt, 14);
-                    var mk = new mxn.Marker(pt);
-                    map.addMarker(mk);
+                    // var pt = new mxn.LatLonPoint(45.528479,-122.676086);
+                    // map.setCenterAndZoom(pt, 14);
+                    // var mk = new mxn.Marker(pt);
+                    // map.addMarker(mk);
                 });
         } else {
             alert('Could not find location');
