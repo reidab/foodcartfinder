@@ -11,6 +11,8 @@ class ReportsController < ApplicationController
   end
   
   def create
+    params[:report][:food_types].reject!(&:blank?)
+    params[:report][:diet_friendliness].reject!(&:blank?)
     @report = Report.new(params[:report])
     if @report.save
       flash[:success] = "Your report was successfully created!"
