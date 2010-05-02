@@ -5,15 +5,15 @@
             <li class='labeled'>
               <%= label_tag "Location" %>
               <%= @map.div(:width => 250, :height => 200) %>
-			  <%= button_to_function "Find me!", "findme();" %>
+              <%= button_to_function "Find me!", "findme();" %>
             </li>
             <%= f.input :latitude %>
             <%= f.input :longitude %>
-            <%= f.input :hours, :input_html => {:size => "40x4"} %>
-            <%= f.input :price_range, :collection => Report::PRICE_RANGES, :as => :select %>
+            <%= f.input :hours, :input_html => {:size => "40x4"}, :wrapper_html => {:class => 'labeled'} %>
+            <%= f.input :price_range, :collection => Report::PRICE_RANGES, :as => :select, :prompt => 'Price Range' %>
             <%= f.input :food_types, :collection => Report::FOOD_TYPES, :as => :check_boxes %>
             <%= f.input :diet_friendliness, :collection => Report::DIETS, :as => :check_boxes %>
-            <%= f.input :comments, :input_html => {:size => "40x4"} %>
+            <%= f.input :comments, :input_html => {:size => "40x4"}, :wrapper_html => {:class => 'labeled'} %>
         <% end -%>
         <% f.buttons do %>
             <%= f.commit_button "Save Report" %>

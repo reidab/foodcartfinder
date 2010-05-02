@@ -6,9 +6,9 @@ class JQTouchFormBuilder < Formtastic::SemanticFormBuilder
     super
   end
 
-  def check_box(method, options, checked_value, unchecked_value)
-    template.content_tag(:span, super, :class => 'toggle')
-  end
+  # def check_box(method, options, checked_value, unchecked_value)
+  #   template.content_tag(:span, super, :class => 'toggle')
+  # end
 
   def label_text(method, options=nil)
     text = localized_string(method, text, :label) || humanized_attribute_name(method)
