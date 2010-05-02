@@ -1,6 +1,8 @@
 class ReportsController < ApplicationController
   
   def new
+    page_title "New Report"
+
     @report = Report.new
     @map = Mapstraction.new("map_div", :yahoo)
     @map.control_init(:small => true)

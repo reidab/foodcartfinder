@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+  # Provide access to page_title in controllers
+  include PageTitleHelper
 end
