@@ -1,27 +1,26 @@
-body {
-  background-color: black;
-  color: white;
-  font-family: Helvetica, sans-serif;
+fieldset {
+  border: none;
+  padding: 0;
+}
+fieldset ul {
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 3px;
+}
+fieldset ul li:first-child, fieldset ul li:first-child a {
+    border-top: 0;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+fieldset ul li:last-child, fieldset ul li:last-child a {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
 }
 
-h1 {
-  text-transform: uppercase;
-  color: orange;
+form.formtastic fieldset label {
+  display: none;
 }
-
-a {
-  color: blue;
-}
-
-a:visited {
-  color: purple;
-}
-
-.content {
-  background-color: white;
-  color: black;
-  margin: 0 auto;
-  padding: 1em;
-  -webkit-border-radius: 5px;  
-  -moz-border-radius: 5px;
+form.formtastic .labeled label,
+form.formtastic legend label,
+form.formtastic fieldset fieldset label {
+  display: inline;
 }

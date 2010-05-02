@@ -1,11 +1,12 @@
-<h1>New Report</h1>
-
 <div class="content">
     <% semantic_form_for @report do |f| %>
-        <% f.inputs do %>
+        <% f.inputs :class => 'edit rounded' do %>
             <%= f.input :name %>
-            <%= @map.div(:width => 300, :height => 200) %>
-            <%= button_to_function "Find me!", "findme();" %>
+            <li class='labeled'>
+              <%= label_tag "Location" %>
+              <%= @map.div(:width => 250, :height => 200) %>
+			  <%= button_to_function "Find me!", "findme();" %>
+            </li>
             <%= f.input :latitude %>
             <%= f.input :longitude %>
             <%= f.input :hours, :input_html => {:size => "40x4"} %>
