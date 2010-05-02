@@ -8,7 +8,7 @@ class ReportsController < ApplicationController
     page_title "New Report"
 
     @report = Report.new
-    @map = Mapstraction.new("map_div", :yahoo)
+    @map = Mapstraction.new("map_div", :openlayers)
     @map.control_init(:small => true)
     @map.center_zoom_init([45.521094,-122.676274],17)
   end
