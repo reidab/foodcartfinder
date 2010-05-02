@@ -23,7 +23,7 @@
                 function(pos) {
                     // alert(pos.coords.latitude + ", " + pos.coords.longitude);
                     var pt = new LatLonPoint(pos.coords.latitude, pos.coords.longitude);
-                    map.setCenterAndZoom(pt, 16);
+                    map.setCenterAndZoom(pt, 17);
                     var mk = new Marker(pt);
                     map.addMarker(mk);
                     jQuery("#report_latitude").val(pos.coords.latitude);
@@ -33,7 +33,7 @@
                     // NOT FOUND
                     // alert('Could not find location');
                     // Returning Portland city center
-                    var pt = new LatLonPoint(45.528479,-122.676086);
+                    var pt = new LatLonPoint(45.521094,-122.676274);
                     map.setCenterAndZoom(pt, 14);
                     var mk = new Marker(pt);
                     map.addMarker(mk);
