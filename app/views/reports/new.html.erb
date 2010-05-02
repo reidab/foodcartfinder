@@ -20,3 +20,7 @@
         <% end -%>
     <% end -%>
 </div>
+
+<% content_for :toolbar do %>
+    <%= link_to "List", reports_path, :class => "back" %>
+<% end %>

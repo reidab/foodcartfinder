@@ -43,6 +43,7 @@
                     var pt = new LatLonPoint(pos.coords.latitude, pos.coords.longitude);
                     map.setCenterAndZoom(pt, 17);
                     var mk = new Marker(pt);
+                    mk.setAttribute("icon", "/images/arrow_down.png");
                     map.addMarker(mk);
                     jQuery("#report_latitude").val(pos.coords.latitude);
                     jQuery("#report_longitude").val(pos.coords.longitude);
