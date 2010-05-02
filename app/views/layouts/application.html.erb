@@ -14,19 +14,20 @@
 
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript"> google.load("jquery", "1.3.2"); </script>
-    <%= javascript_include_tag 'jqtouch/jqtouch.min.js', 'jqtouch/jqtouch.transitions.js' %>
+    <%#= javascript_include_tag 'jqtouch/jqtouch.min.js', 'jqtouch/jqtouch.transitions.js' %>
 
     <script type="text/javascript" charset="utf-8">
-      $.jQTouch({
-          icon: 'jqtouch.png',
-          statusBar: 'black-translucent',
-          preloadImages: [
-              '/javascripts/jqtouch/themes/jqt/img/chevron_white.png',
-              '/javascripts/jqtouch/themes/jqt/img/bg_row_select.gif',
-              '/javascripts/jqtouch/themes/jqt/img/back_button_clicked.png',
-              '/javascripts/jqtouch/themes/jqt/img/button_clicked.png'
-              ]
-      });
+      // $.jQTouch({
+      //           icon: 'jqtouch.png',
+      //           statusBar: 'black-translucent',
+      //           formSelector: false,
+      //           preloadImages: [
+      //               '/javascripts/jqtouch/themes/jqt/img/chevron_white.png',
+      //               '/javascripts/jqtouch/themes/jqt/img/bg_row_select.gif',
+      //               '/javascripts/jqtouch/themes/jqt/img/back_button_clicked.png',
+      //               '/javascripts/jqtouch/themes/jqt/img/button_clicked.png'
+      //               ]
+      //       });
     </script>
 
     <%= Mapstraction.header(:yahoo) %>
@@ -67,9 +68,7 @@
       <h1><%=h page_title %></h1>
       <%= yield(:toolbar) %>
     </div>
-    <%= flash[:notice] %>
-    <%= flash[:error] %>
-    <%= flash[:success] %>
+    <%= render_flash %>
     <%= yield %>
   </div>
 </body>

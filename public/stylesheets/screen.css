@@ -24,3 +24,112 @@ form.formtastic legend label,
 form.formtastic fieldset fieldset label {
   display: inline;
 }
+
+/* line 4, ../../../app/stylesheets/base/_utility.sass */
+div.message {
+  color: #222;
+  padding: 0 1em 1em;
+  margin: 1em;
+  border: 1px solid;
+  position: relative;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+}
+
+
+/* line 6, ../../../app/stylesheets/base/_utility.sass */
+div.message.with_label {
+  padding-left: 7.5em;
+}
+/* line 11, ../../../app/stylesheets/base/_utility.sass */
+div.message p + p {
+  text-indent: 0;
+}
+/* line 13, ../../../app/stylesheets/base/_utility.sass */
+div.message a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* line 59, ../../../app/stylesheets/tenant.sass */
+div.message .message_type {
+  border-top-left-radius: 0.5em;
+  -moz-border-radius-topleft: 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  -moz-border-radius-bottomleft: 0.5em;
+  -webkit-border-bottom-left-radius: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 6em;
+  padding-right: .8em;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 2.5em;
+  text-align: right;
+}
+/* line 28, ../../../app/stylesheets/base/_utility.sass */
+div.message.notice {
+  border-color: #0c8ce2;
+  background: #cfeafc;
+}
+/* line 31, ../../../app/stylesheets/base/_utility.sass */
+div.message.notice .message_type {
+  background: #0c8ce2;
+}
+/* line 33, ../../../app/stylesheets/base/_utility.sass */
+div.message.notice a {
+  color: #0c8ce2;
+}
+/* line 35, ../../../app/stylesheets/base/_utility.sass */
+div.message.success {
+  border-color: #00b924;
+  background: #ccffd6;
+}
+/* line 38, ../../../app/stylesheets/base/_utility.sass */
+div.message.success .message_type {
+  background: #00b924;
+}
+/* line 40, ../../../app/stylesheets/base/_utility.sass */
+div.message.success a {
+  color: #00b924;
+}
+/* line 42, ../../../app/stylesheets/base/_utility.sass */
+div.message.warning {
+  border-color: #ffc908;
+  background: #fff4cc;
+}
+/* line 45, ../../../app/stylesheets/base/_utility.sass */
+div.message.warning .message_type {
+  background: #ffc908;
+  color: #222;
+}
+/* line 48, ../../../app/stylesheets/base/_utility.sass */
+div.message.error {
+  border-color: #cc0000;
+  background: #ffcccc;
+}
+/* line 51, ../../../app/stylesheets/base/_utility.sass */
+div.message.error .message_type {
+  background: #cc0000;
+}
+/* line 53, ../../../app/stylesheets/base/_utility.sass */
+div.message.error a {
+  color: #cc0000;
+}
+/* line 55, ../../../app/stylesheets/base/_utility.sass */
+div.message.urgent {
+  border-color: #ec7a00;
+  background: #ffe6cc;
+}
+/* line 58, ../../../app/stylesheets/base/_utility.sass */
+div.message.urgent .message_type {
+  background: #ec7a00;
+}
+/* line 60, ../../../app/stylesheets/base/_utility.sass */
+div.message.urgent a {
+  color: #ec7a00;
+}
