@@ -9,7 +9,7 @@
 	<title>Food Cart Finder!!!</title>
     
     <%= stylesheet_link_tag '/javascripts/jqtouch/jqtouch.min.css',
-                            '/javascripts/jqtouch/themes/jqt/theme.min.css',
+                            '/javascripts/jqtouch/themes/apple/theme.min.css',
                             'screen' %>
 
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
@@ -39,6 +39,7 @@
             navigator.geolocation.getCurrentPosition(
                 function(pos) {
                     // alert(pos.coords.latitude + ", " + pos.coords.longitude);
+                    map.removeAllMarkers();
                     var pt = new LatLonPoint(pos.coords.latitude, pos.coords.longitude);
                     map.setCenterAndZoom(pt, 17);
                     var mk = new Marker(pt);
