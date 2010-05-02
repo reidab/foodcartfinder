@@ -1,0 +1,16 @@
+<ul class="metal">
+    <% for report in @reports %>
+    <li>
+        <h3><%= report.name %></h3>
+        <p>Type: <%= report.food_types.to_sentence %></p>
+        <p>Options for: <%= report.diet_friendliness.to_sentence %></p>
+        <p>Price: <%= report.price_category %></p>
+        <p>Hours: <%= report.hours %></p>
+        <p>Comments: <%= report.comments %></p>
+    </li>
+    <% end %>
+</ul>
+
+<% content_for :toolbar do %>
+    <%= link_to "New", new_report_path, :class => "back" %>
+<% end %>

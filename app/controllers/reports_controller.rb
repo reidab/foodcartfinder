@@ -1,5 +1,9 @@
 class ReportsController < ApplicationController
   
+  def index
+    @reports = Report.all
+  end
+  
   def new
     page_title "New Report"
 
@@ -7,7 +11,6 @@ class ReportsController < ApplicationController
     @map = Mapstraction.new("map_div", :yahoo)
     @map.control_init(:small => true)
     @map.center_zoom_init([45.521094,-122.676274],17)
-    # @map.marker_init(Marker.new([45.528479,-122.676086], :label => "Here", :info_bubble => "Info! Info!"))
   end
   
   def create

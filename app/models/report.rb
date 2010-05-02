@@ -8,4 +8,8 @@ class Report < ActiveRecord::Base
   
   serialize :food_types
   serialize :diet_friendliness
+  
+  def price_category
+    self.price_range ? PRICE_RANGES[self.price_range][0] : nil
+  end
 end
